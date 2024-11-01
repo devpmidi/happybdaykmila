@@ -1,0 +1,188 @@
+/* reset css */
+
+* {
+  min-width: 0;
+  @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* styles */
+/* TODO: Cambiar la fuente
+
+* {
+  font-family: comic-sans;
+} */
+
+body {
+  background-color: #ffa3ca;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-letter {
+  position: relative;
+}
+
+.cover {
+  position: absolute;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+  border-top: 100px solid #da7cff;
+  border-bottom: 100px solid transparent;
+
+  /*  */
+  transition: transform .75s;
+  transform-origin: top;
+}
+
+.paper {
+  position: absolute;
+  padding: 1rem;
+  line-height: 2rem;
+  right: 5px;
+  /*  */
+  z-index: -1;
+  background: white;
+  width: 390px;
+  height: 180px;
+
+  transition: all .75s;
+}
+
+.letter {
+  border-left: 200px solid #e39bff;
+  border-right: 200px solid #e39bff;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid #da7cff;
+}
+
+.options {
+  display: flex;
+  gap: 5rem;
+
+  & button {
+    color: #a332ff;
+    font-weight: 600;
+    border-radius: 3px;
+    background: #fad7df;
+    padding: 0.5rem 1rem;
+    border: 1px solid #be33fe;
+    cursor: pointer;
+  }
+
+  & button:hover {
+    background: #ff989e;
+    color: white;
+  }
+}
+
+.open-cover {
+  transform: rotatex(180deg);
+}
+
+.open-paper {
+  animation: openPaper .5s forwards;
+}
+
+@keyframes openPaper {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -170px;
+  }
+}
+
+.close-paper {
+  animation: closePaper .5s forwards;
+}
+
+@keyframes closePaper {
+  0% {
+    top: -120px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+
+.heart {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 46.5%;
+  margin: auto;
+  font-size: 3rem;
+
+  color: #b433fe;
+
+  animation: crecer 1s forwards ;
+}
+
+@keyframes crecer {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  100% {
+    scale: 3;
+    opacity: 0;
+
+  }
+}
+
+.back-button {
+  display: inline-block;
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: #ffb6c1; /* Rosa */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid #ff8ba0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+}
+
+.back-button:hover {
+  background-color: #ff8ba0; /* Rosa escuro */
+  color: #ffffff;
+}

@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f5;
+    overflow: hidden;
+}
+
+.background-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: rgba(255, 182, 193, 0.2); /* Rosa claro com transparência */
+    z-index: -1;
+    text-align: center;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item video {
+    width: 90%; /* Reduz um pouco para dar espaço nas bordas */
+    height: auto;
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: 3px solid #ffb6c1; /* Borda rosa */
+    background-color: #ffe4e1; /* Fundo rosa claro */
+    padding: 10px; /* Espaço ao redor do vídeo */
+}
+
+.carousel-item img, .carousel-item video {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 182, 193, 0.5); /* Rosa com transparência */
+    color: white;
+    border: none;
+    font-size: 1.5em; /* Diminui o tamanho da seta */
+    padding: 0.3em; /* Reduz o preenchimento */
+    cursor: pointer;
+    border-radius: 0%; /* Forma circular */
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255, 139, 160, 0.7); /* Mais visível ao passar o mouse */
+}
+
+
+.wordSearch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    user-select: none;
+    padding: 10px;
+    border: 3px solid #ffb6c1; /* Borda rosa */
+    border-radius: 15px; /* Bordas arredondadas */
+    background-color: #fff0f5; /* Fundo rosa suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.wordSearch table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.wordSearch td {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ffb6c1; /* Borda rosa */
+    border-radius: 5px; /* Bordas arredondadas para as células */
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #333; /* Cor do texto */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
+}
+
+.highlight {
+    background-color: #eca6e1; /* Cor rosa para seleção */
+    color: white;
+}
+
+.found {
+    background-color: #b19cd9; /* Lilás claro para palavras encontradas */
+    color: white;
+}
+
+.words {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.word {
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+    color: #ff69b4; /* Rosa vibrante */
+    cursor: pointer;
+}
+
+.found-word {
+    text-decoration: line-through;
+    color: #9370db; /* Lilás escuro para palavras encontradas */
+}
+
+.back-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #ffb6c1; /* Rosa */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #ff8ba0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #ff8ba0; /* Rosa escuro */
+    color: #ffffff;
+}

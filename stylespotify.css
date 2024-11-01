@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0cfff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+}
+
+h1 {
+    font-size: 24px;
+    color: #ff4500;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.playlist iframe {
+    border-radius: 8px;
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.back-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #ffb6c1; /* Rosa */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #ff8ba0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #ff8ba0; /* Rosa escuro */
+    color: #ffffff;
+}
